@@ -37,6 +37,7 @@ h4{
   background-color:  #333333;
   border-radius: 15px;
   margin-top: 5%;
+  box-sizing: border-box; 
 }
 .total-container {
   display: flex;
@@ -84,6 +85,7 @@ h4{
   height: 100px;
   border: 1px solid black;
   border-radius: 20px;
+  padding: 15px;
 }
 
 
@@ -191,15 +193,23 @@ ul li{
   .income-containers {
     height: auto;
     margin-bottom: 20px;
+    width: 100%;
   }
-
+  .popup{
+    width: 100%; 
+  padding: 15px;
+  left: 10%;
+  margin-bottom: 8px; 
+  }
   .expense-btn,
-  .btn-income {
-    margin-left: 0;
-  }
+.btn-income {
+  width: 100%; 
+  padding: 15px;
+  margin-bottom: 8px; 
+}
 
   .search-container input[type="text"] {
-    width: 100%;
+    width: 95%;
   }
 
   .transaction-info {
@@ -210,4 +220,23 @@ ul li{
   .trns-amount {
     text-align: center;
   }
+}
+
+.popup {
+  position: absolute;
+  background-color: #333;
+  width: 90%;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.expense-popup {
+  top: calc(100% + 10px);
+}
+
+.income-popup {
+  bottom: calc(100% + 10px);
 }
